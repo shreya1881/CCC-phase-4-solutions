@@ -30,6 +30,13 @@ TreeNode* insert(TreeNode* node, int val) {
 // Your code here
 
 /*******************************************************************/
+void postorder(TreeNode* node){
+    if(node==NULL) return;
+    postorder(node->L);
+    postorder(node->R);
+    printf("%d ",node->x);
+}
+
 
 int main() {
 	int val, N; scan(N);
